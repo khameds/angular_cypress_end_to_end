@@ -1,0 +1,39 @@
+form {
+    display: grid;
+    grid-template-columns: 10rem 20rem;
+
+    >* {
+        margin-bottom: .3em;
+    }
+
+    input:not([type="submit"]) {
+        width: 100%;
+    }
+}
+
+.pokemons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    >div {
+        text-align: center;
+        margin: 1rem;
+        cursor: pointer;
+        transition: transform .5s;
+        font-style: italic;
+
+        img {
+            max-width: 20rem;
+        }
+
+        .name {
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
