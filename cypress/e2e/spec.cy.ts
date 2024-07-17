@@ -21,7 +21,7 @@ describe('Add a pokemon', () => {
   it('Should add new pokemon to list', () => {
 
     cy.get('[ng-reflect-name="name"]').type("YUMYUM");
-    cy.get('[ng-reflect-name="imageUrl"]').type("https://ibb.co/Bw3YZyr");
+    cy.get('[ng-reflect-name="imageUrl"]').type("https://i.ibb.co/d7MH2PL/YumYum.jpg");
     cy.get('[ng-reflect-name="supertype"]').type("Pokemon");
     cy.get('[type="submit"]').click();
     cy.contains("YUMYUM").should('exist');
@@ -39,7 +39,7 @@ describe('Add a pokemon', () => {
   })
   it('Should forbid pokemon creation if lower case name', () => {
     cy.get('[ng-reflect-name="name"]').type("lowercasename");
-    cy.get('[ng-reflect-name="imageUrl"]').type("https://ibb.co/Bw3YZyr");
+    cy.get('[ng-reflect-name="imageUrl"]').type("https://i.ibb.co/d7MH2PL/YumYum.jpg");
     cy.get('[ng-reflect-name="supertype"]').type("Pokemon");
   
 
